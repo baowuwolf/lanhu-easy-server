@@ -2,6 +2,7 @@ const fs = require('fs');
 const { readDirToObjTree } = require('../node/rendFile.js');
 const htmlVnode = require('../node/html/htmlVnode.js');
 const cssAst = require('../node/css/cssast.js');
+const downloadPath = require('../node/getDownload.js')
 
 class WbH5 {
 
@@ -32,6 +33,10 @@ class WbH5 {
             htmlStr,
             cssStr
         } 
+    }
+
+    async getDownload(ctx) {
+        ctx.body = { downloadPath }
     }
 }
 
