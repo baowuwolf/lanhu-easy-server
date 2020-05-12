@@ -22,7 +22,7 @@ function parseVNode(vnode) {
 // 解析生成div
 function createDiv(vnode) {
   let _node = null
-  _node = document.createElement('div')
+  _node = document.createElement(vnode.tag)
   _node.setAttribute('class', vnode.className.split('.')[1])
   // 创建文字节点
   if (vnode.innerText) {
